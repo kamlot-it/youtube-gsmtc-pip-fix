@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube GSMTC PiP Fix",
+  "version": "0.1.0",
+  "description": "Attempts to restore Chrome's Windows media session after entering or leaving Picture-in-Picture on YouTube.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://music.youtube.com/*"
+      ],
+      "js": ["youtube-gsmtc-fix.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}
